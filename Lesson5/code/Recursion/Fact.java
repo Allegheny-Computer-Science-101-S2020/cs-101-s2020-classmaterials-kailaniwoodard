@@ -7,41 +7,31 @@ public class Fact {
   /** Method to display factorials.
   */
   public static int factorial(int num) {
-    int fact = 0;
-    for(int i = num; i > 0; i--) {
-      if (i == num) {
-        fact = num;
-      } else {
-        fact *= i;
-      }
+    if (num <= 1) {
+      return 1;
     }
-    return fact;
+    return num * factorial(num-1);
   }
 
   /** Method to calculate sum.
   */
   public static int sum(int num) {
-    int sum = 0;
-    for(int i = num; i > 0; i--) {
-      if (i == num) {
-        sum = num;
-      } else {
-        sum += i;
-      }
+    if (num <= 0) {
+      return 0;
     }
-    return sum;
+    return num + sum(num-1);
   }
 
   /** Main method for the Fact class.
   */
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    /*
     System.out.println("What number would you like to display the factorial of?");
     int number = sc.nextInt();
     System.out.println("The factorial (" + number + "!) of " + number + " is:");
     System.out.println(factorial(number));
-    */
-    System.out.println(sum(10));
+
+    //System.out.println(sum(20));
+    // Stack follows LIFO (last in, first out)
   }
 }
