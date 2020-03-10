@@ -71,7 +71,7 @@ public class Links extends Node {
     while (current != null && current.getNext().getData() != data) {
       current = current.getNext();
     }
-    if (current.getData() == data) {
+    if (current.getNext().getData() == data) {
       return true;
     } else {
       return false;
