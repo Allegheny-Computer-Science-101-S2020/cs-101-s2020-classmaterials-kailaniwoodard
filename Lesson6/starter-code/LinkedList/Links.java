@@ -65,4 +65,16 @@ public class Links extends Node {
     }
     size--;
   }
+
+  public boolean findNode(int data) {
+    Node current = head;
+    while (current != null && current.getNext().getData() != data) {
+      current = current.getNext();
+    }
+    if (current.getData() == data) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

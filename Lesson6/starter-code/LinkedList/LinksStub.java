@@ -32,5 +32,7 @@ public class LinksStub {
 			link_arr[i].displayNodes();
 		}
 
+		link_arr[0].findNode(3);
+
 	}
 }
